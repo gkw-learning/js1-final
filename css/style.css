@@ -1,0 +1,28 @@
+body {
+  background-color: #191919;
+  color: #d6ac2e;
+  font-family: Arial, Helvetica, sans-serif; }
+
+#addToDo {
+  width: 200px;
+  padding: 8px;
+  border: none; }
+  #addToDo ::placeholder {
+    color: #a3a19a;
+    opacity: 1;
+    /* Firefox */ }
+  #addToDo :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #a3a19a; }
+  #addToDo ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #a3a19a; }
+
+#button {
+  border: none;
+  border-radius: 0;
+  padding: 8px;
+  background-color: #2196f3;
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */
