@@ -27,13 +27,16 @@
   let form = document.getElementById('toDoForm');
   let ul = document.getElementById('todoList');
   let li = document.createElement('li');
+  let arrayOfToDos = [];
 
   form.addEventListener('submit', e => {
     e.preventDefault(); //stops form from being sent according to my book.
     let userInput = thingToDo.value;
     // let msg = 'Welcome ' + userInput;
     // document.getElementById('theH2').textContent = msg;
-    ul.appendChild(li);
     li.appendChild(document.createTextNode(userInput));
+    let item = ul.appendChild(li);
+    let push = arrayOfToDos.push(item);
+    console.log(arrayOfToDos);
   });
 })();
