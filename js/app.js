@@ -18,20 +18,22 @@
 //wash and repeat
 //maybe create a li on click
 
-// theH3.addEventListener('mouseover', e => {
-//   theH3.textContent = `in case you forgot, we're converting from ${numifyTemp} ${scale}`; //add some text content
-// });
-
-//immediately invoked function expression;
+//Now that I have the user todo printing to the h2,
+//figure out how to add the user todo to an array.
+//each time the user adds a todo, add another li
+//immediately invoked function expression aka IIFE;
 (function() {
   let userInput = document.getElementById('thingToDo'); //this only returns the element, not what user types
-  var form = document.getElementById('toDoForm');
+  let form = document.getElementById('toDoForm');
+  let ul = document.getElementById('todoList');
+  let li = document.createElement('li');
 
   form.addEventListener('submit', e => {
-    e.preventDefault();
-    // let elements = this.elements; //selects all form elements
+    e.preventDefault(); //stops form from being sent according to my book.
     let userInput = thingToDo.value;
-    let msg = 'Welcome ' + userInput;
-    document.getElementById('theH2').textContent = msg;
+    // let msg = 'Welcome ' + userInput;
+    // document.getElementById('theH2').textContent = msg;
+    ul.appendChild(li);
+    li.appendChild(document.createTextNode(userInput));
   });
 })();
