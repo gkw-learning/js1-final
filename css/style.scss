@@ -1,33 +1,44 @@
+/* ----------------------------------------------------------- */
+/*  Color Palette                                              */
+/*------------------------------------------------------------ */
+$yellow: #ffb311;
+$green: #51cc7a;
+$blue: #2196f3;
+$grey: #a3a19a;
+$fake-black: #191919;
+/* ----------------------------------------------------------- */
+/*  Pixel to rem                                               */
+/*------------------------------------------------------------ */
+$font14px: .875rem;
+$font12px: .75rem;
+$font10px: .625rem;
+/* let the code begin
+------------------------------------------------------------- */
 body {
-  background-color: #191919;
-  color: #d6ac2e;
+  background-color: $fake-black;
+  color: $yellow;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#addTodo {
+input.addTodo {
   width: 200px;
   padding: 8px;
   border: none;
-  ::placeholder {
-    color: #a3a19a;
-    opacity: 1; /* Firefox */
-  }
-
-  :-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #a3a19a;
-  }
-
-  ::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: #a3a19a;
-  }
+  color: $grey;
 }
 
-#button {
+input.addTodo:focus {
+  color: $fake-black;
+}
+
+input.button {
   border: none;
   border-radius: 0;
   padding: 8px;
-  background-color: #2196f3;
+  background-color: $green;
   color: white;
+}
+
+input.button:focus {
+  outline: none;
 }

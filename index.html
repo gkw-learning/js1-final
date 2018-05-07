@@ -15,10 +15,15 @@
       <!-- <h2 id="theH2">default</h2> -->
         <ul id='todoList'>
         </ul>
-      <form id=todoForm value='todoForm'>
-        <input type="text" id="thingTodo" name="thingTodo"/>
-        <input type="submit" id="submit" placeholder="click to submit" />
+      <form id=todoForm action="./index.html" value='todoForm' method="GET">
+        <input type="text" id="thingTodo" class="addTodo" value='Add a task' onfocus="this.placeholder=''" onblur="this.placeholder='Add a task'"/>
+        <!-- <input type="text" id="thingTodo" class="addTodo" placeholder='Add a task' /> -->
+        <input type="submit" id="submit" class="button" value="add +" />
     </form>
+    <!-- <form class="todo-form" action="index.html" method="post" name="todo-form" id="form">
+   <input type="text" name="text-field" class="text-field" placeholder="Let's get things done!" id="text-input">
+   <input type="button" name="submit-btn" class="submit-btn" value="+" id="button">
+ </form> -->
     <section>
     <!-- Done
     ************************************************************* -->
