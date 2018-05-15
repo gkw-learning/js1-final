@@ -37,18 +37,20 @@
 // }
 
 let form = document.getElementById('todoForm');
+let submitBtn = document.getElementById('submit');
+let radioBtn = document.getElementById('rank');
+//i want to listen to an event on radio button for when it changes, then remove disabled from the submit
 let arrayOfTasks = [];
 
-let bg = document.getElementById('submit');
-
 function createTask() {
-  let radioOnInput = document.querySelectorAll('input#rank'); //grabs all inputs with id rank
+  let radioOnInput = document.querySelectorAll('input#rank'); //grabs all inputs with id #rank
   for (let i = 0; i < radioOnInput.length; i++) {
     //loops through lenght of radioInput, whichever is selected canges submit color
     radioOnInput[i].addEventListener('change', e => {
       //listens for change on any radio
       e.preventDefault();
-      bg.style.backgroundColor = '#51cc7a'; //changes color of submit text
+      submitBtn.style.backgroundColor = '#51cc7a'; //changes color of submit text
+      submitBtn.removeAttribute('disabled');
     });
   }
 
