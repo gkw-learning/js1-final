@@ -8,35 +8,42 @@ function createTask() {
   //loops through length of radioOnInput, whichever is selected canges submit color
   for (let i = 0; i < radioOnInput.length; i++) {
     //listens for change on any radio
-    radioOnInput[i].addEventListener('change', e => {
+    let x = radioOnInput[i].addEventListener('change', e => {
       e.preventDefault();
       submitBtn.style.backgroundColor = '#51cc7a'; //changes color of submit text
       submitBtn.removeAttribute('disabled'); //removes the disabled attribute on submit
+      x = radioOnInput[i];
+      //if value="high" unshift() answer to beginning of array;
+
+      let rank = x.value; //stores the rank user assigsn to task
+      console.log(rank);
+
+      form.addEventListener(
+        'submit' || 'keydown',
+        e => {
+          e.preventDefault();
+          // let task;
+          let task = thingTodo.value; // stores the task typed by user
+
+          //creating new function by using the constructor function, AddNewTask
+          let newTask = new AddNewTask(task, rank);
+          arrayOfTasks.push(newTask);
+          console.log('check it', arrayOfTasks);
+
+          let liNode = document.createElement('li'); //creating li node. must be local scope.
+          let textNode = document.createTextNode(task); //grabs value from task key
+          liNode.appendChild(textNode); //adds value from task to <li>
+          document.getElementById('todoList').appendChild(liNode); //appends the <li> to the <ul>
+          task = thingTodo.value = ''; //assign empty string to clear input form after submit clicked
+        },
+        false
+      );
     });
   }
-
-  form.addEventListener(
-    'submit' || 'keydown',
-    e => {
-      e.preventDefault();
-      let userTask;
-      userTask = thingTodo.value;
-      //creating new function by using the constructor function, AddNewTask
-      let newTask = new AddNewTask(userTask);
-      arrayOfTasks.push(newTask);
-      console.log('check it', arrayOfTasks);
-
-      let liNode = document.createElement('li'); //creating li node. must be local scope.
-      let textNode = document.createTextNode(userTask); //grabs value from userTask key
-      liNode.appendChild(textNode); //adds value from userTask to <li>
-      document.getElementById('todoList').appendChild(liNode); //appends the <li> to the <ul>
-      userTask = thingTodo.value = ''; //assign empty string to clear input form after submit clicked
-    },
-    false
-  );
 }
 createTask();
 
-function AddNewTask(userTask) {
-  this.userTask = userTask;
+function AddNewTask(task, rank) {
+  this.task = task;
+  this.rank = rank;
 }
