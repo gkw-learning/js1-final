@@ -48,7 +48,7 @@ function createTask() {
     radioOnInput[i].addEventListener('change', e => {
       //listens for change on any radio
       e.preventDefault();
-      bg.style.color = 'red'; //changes color of submit text
+      bg.style.backgroundColor = '#51cc7a'; //changes color of submit text
     });
   }
 
