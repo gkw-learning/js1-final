@@ -24,9 +24,11 @@
 /* maybe dom elements can take place of default values */
 // create a constructor function that makes a new Obj using
 // the input todoForm
-
+let radio = document.getElementById('rank');
 let form = document.getElementById('todoForm');
 let arrayOfTasks = [];
+
+let bg = document.getElementById('submit');
 
 function createTask() {
   form.addEventListener(
@@ -49,8 +51,12 @@ function createTask() {
     false
   );
 }
-createTask();
-
+// createTask();
+// function isChecked() {
+//   radio.addEventListener(if radio is checked){
+//     then change button from grey to green and make it click able.
+//   };
+// }
 //the constructor function
 function AddNewTask(userTask) {
   this.userTask = userTask;
