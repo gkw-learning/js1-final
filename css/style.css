@@ -1,45 +1,34 @@
 /* ----------------------------------------------------------- */
 /*  Color Palette                                              */
 /*------------------------------------------------------------ */
-$yellow: #ffb311;
-$green: #51cc7a;
-$blue: #2196f3;
-$grey: #a3a19a;
-$fake-black: #191919;
 /* ----------------------------------------------------------- */
 /*  Pixel to rem                                               */
 /*------------------------------------------------------------ */
-$font14px: .875rem;
-$font12px: .75rem;
-$font10px: .625rem;
 /* let the code begin
 ------------------------------------------------------------- */
 body {
-  background-color: $fake-black;
-  color: $yellow;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  background-color: #191919;
+  color: #ffb311;
+  font-family: Arial, Helvetica, sans-serif; }
 
 input.addTodo {
   width: 200px;
   padding: 8px;
   border: none;
-  color: $grey;
-}
+  color: #a3a19a; }
 
 input.addTodo:focus {
-  color: $fake-black;
-}
+  color: #191919; }
 
 input.button {
   width: 30px;
   border: none;
   border-radius: 0;
   padding: 8px;
-  background-color: $green;
-  color: white;
-}
+  background-color: #51cc7a;
+  color: white; }
 
 input.button:focus {
-  outline: none;
-}
+  outline: none; }
+
+/*# sourceMappingURL=style.css.map */
