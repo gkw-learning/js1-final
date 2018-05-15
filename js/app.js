@@ -26,31 +26,28 @@
 // the input todoForm
 
 let form = document.getElementById('todoForm');
-let usersArray = [];
+let arrayOfTasks = [];
 // let userAnswer = document.getElementById('thingTodo'); //doesnt seem like i need this?
-function test() {
+function createTask() {
   form.addEventListener(
     'submit' || 'keydown',
     e => {
       e.preventDefault();
-      let storeAnswer;
-      storeAnswer = userAnswer = thingTodo.value;
-      console.log(
-        'if this shows in the console, youre doing it wrong',
-        storeAnswer
-      );
-      userAnswer = thingTodo.value = '';
-      let newTodo = new Test('testing');
-      usersArray.push(newTodo);
-      console.log('check it', usersArray);
+      let userTask;
+      userTask = thingTodo.value;
+      //creating new function by using the constructor function, AddNewTask
+      let newTask = new AddNewTask(userTask);
+      arrayOfTasks.push(newTask);
+      console.log('check it', arrayOfTasks);
+      //assign empty string to clear input form after submit clicked
+      userTask = thingTodo.value = '';
     },
     false
   );
 }
+createTask();
 
-test();
-// console.log('if this shows in the console, youre doing it right', storeAnswer);
-
-function Test(storeAnswer) {
-  this.storeAnswer = storeAnswer;
+//the constructor function
+function AddNewTask(userTask) {
+  this.userTask = userTask;
 }
