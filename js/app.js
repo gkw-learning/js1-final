@@ -55,7 +55,24 @@ function createTask() {
         liNode.appendChild(textNode); //adds value from task to <li>
         green.appendChild(liNode); //appends the <li> to the <ul>
       }
-
+      done.addEventListener(
+        'click',
+        e => {
+          e.preventDefault();
+          console.log('you just clicked on done');
+          liNode.style.color = '#a3a19a';
+        },
+        false
+      );
+      trash.addEventListener(
+        'click',
+        e => {
+          e.preventDefault();
+          console.log('you just clicked on done');
+          liNode.remove();
+        },
+        false
+      );
       //does not splice correctly
       if (newTask.rank === '1') {
         arrayOfTasks.unshift(newTask);
