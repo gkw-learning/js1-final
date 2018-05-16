@@ -17,21 +17,24 @@
     </header>
     <!-- Quick Add
     ************************************************************* -->
-    <section>
-      <h1>Quick Add</h1>
+    <section class='quick-add-container'>
+      <h1 class="label">Quick Add</h1>
       <form id=todoForm action="./index.html" value='todoForm'>
+        <div class="input-container">
         <input type="text" id="thingTodo" class="addTodo" placeholder='Add a task'/>
         <!--event listener removes disabled when radio button select, making submit btn work -->
         <input type="submit" disabled id="submit" name="submit" class="button" value='add +'/>
-        <div>
+      </div>
+        <div class="radio-container">
           <!-- radio buttons must have same name so only one can be selected at a time -->
           <input type="radio" id="rank" value="1" name="priority">High
           <input type="radio" id="rank" value="2" name="priority">Medium
           <input type="radio" id="rank" value="3" name="priority">Low
         </div>
       </form>
-      <button>See your bees</button>
+
     </section>
+    <button class="wide-button">See your beez</button>
   </section>
     <!-- Task List View
     ************************************************************* -->

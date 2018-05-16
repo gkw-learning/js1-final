@@ -11,7 +11,7 @@
 /* let the code begin
 ------------------------------------------------------------- */
 body {
-  background-color: #191919;
+  background-color: #1d1d1d;
   color: #ffb311;
   font-family: Arial, Helvetica, sans-serif; }
 
@@ -21,15 +21,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  background-color: #009688; }
+  align-items: center; }
 
 .logo-container {
   background-color: tomato;
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  position: relative;
+  top: 45px; }
   .logo-container .logo {
     font-family: "Cantarell", sans-serif;
     font-size: 2.8rem; }
@@ -42,17 +43,30 @@ body {
     -o-transform: rotate(46deg);
     transform: rotate(46deg); }
 
+.label {
+  font-size: 1.688rem; }
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px; }
+
 input.addTodo {
-  width: 200px;
+  width: 250px;
+  height: 30px;
+  font-size: 1.125rem;
   padding: 8px;
   border: none;
   color: #a3a19a; }
 
 input.addTodo:focus {
-  color: #191919; }
+  color: #1d1d1d; }
 
 input.button {
-  width: 47px;
+  width: 80px;
+  height: 46px;
+  font-size: 1rem;
   border: none;
   border-radius: 0;
   padding: 8px;
@@ -61,5 +75,23 @@ input.button {
 
 input.button:focus {
   outline: none; }
+
+.radio-container {
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px; }
+
+.wide-button {
+  width: 200px;
+  height: 46px;
+  background: #2196f3;
+  border: none;
+  font-size: 1.125rem; }
+
+.quick-add-container {
+  position: relative;
+  top: 20px; }
 
 /*# sourceMappingURL=style.css.map */
