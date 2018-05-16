@@ -32,13 +32,19 @@ input.addTodo:focus {
 }
 
 input.button {
+  width: 47px;
   border: none;
   border-radius: 0;
   padding: 8px;
-  background-color: $green;
+  background-color: $grey;
   color: white;
 }
 
 input.button:focus {
   outline: none;
+}
+
+.ex {
+  background-color: tomato;
+  color: white;
 }

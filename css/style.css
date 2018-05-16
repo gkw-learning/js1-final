@@ -21,13 +21,18 @@ input.addTodo:focus {
   color: #191919; }
 
 input.button {
+  width: 47px;
   border: none;
   border-radius: 0;
   padding: 8px;
-  background-color: #51cc7a;
+  background-color: #a3a19a;
   color: white; }
 
 input.button:focus {
   outline: none; }
+
+.ex {
+  background-color: tomato;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
