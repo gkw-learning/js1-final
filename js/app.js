@@ -37,13 +37,20 @@ function createTask() {
       document.getElementById('todoList').appendChild(liNode); //appends the <li> to the <ul>
       // placee if statement here so liNode is defined
       //adding ranked tasks to array accordingly and color coding
-      if (newTask.rank === 'high') {
-        arrayOfTasks.unshift(newTask);
+      if (newTask.rank === '1') {
+        arrayOfTasks.push(newTask.rank);
         liNode.style.color = 'red';
+      } else if (newTask.rank === '2') {
+        arrayOfTasks.push(newTask.rank);
+        liNode.style.color = 'orange';
       } else {
-        arrayOfTasks.push(newTask);
+        arrayOfTasks.push(newTask.rank);
         liNode.style.color = '#51cc7a';
       }
+      console.log('let us see what the array looks like', arrayOfTasks);
+      let getSorted = arrayOfTasks.sort();
+      console.log(getSorted);
+
       form.reset(); //only resets radios and input, not submit
     },
     false
