@@ -34,9 +34,13 @@ function createTask() {
       let textNode = document.createTextNode(task); //grabs value from task key
       let todoList = document.getElementById('todoList');
       let green = document.getElementById('green');
+      let orange = document.getElementById('orange');
       if (newTask.rank === '1') {
         liNode.appendChild(textNode); //adds value from task to <li>
         todoList.appendChild(liNode); //appends the <li> to the <ul>
+      } else if (newTask.rank === '2') {
+        liNode.appendChild(textNode); //adds value from task to <li>
+        orange.appendChild(liNode); //appends the <li> to the <ul>
       } else {
         liNode.appendChild(textNode); //adds value from task to <li>
         green.appendChild(liNode); //appends the <li> to the <ul>
