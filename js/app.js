@@ -14,9 +14,7 @@ function createTask() {
       submitBtn.style.backgroundColor = '#51cc7a'; //changes color of submit text
       submitBtn.removeAttribute('disabled'); //removes the disabled attribute on submit
       x = radioOnInput[i];
-      //if value="high" unshift() answer to beginning of array;
-
-      rank = x.value; //stores the rank user assigsn to task
+      rank = x.value; //stores the rank/priority user assigns to task
       console.log(rank);
     });
   }
@@ -29,13 +27,34 @@ function createTask() {
 
       //creating new function by using the constructor function, AddNewTask
       let newTask = new AddNewTask(task, rank);
-      arrayOfTasks.push(newTask);
-      console.log('check it', arrayOfTasks);
+      //if value="high" unshift() answer to beginning of array;
+      // arrayOfTasks.push(newTask);
+      console.log('check it part2', newTask.rank);
+      if (newTask.rank === 'high') {
+        arrayOfTasks.unshift(newTask);
+      } else {
+        arrayOfTasks.push(newTask);
+      }
+      console.log('this should be ranked', arrayOfTasks);
 
       let liNode = document.createElement('li'); //creating li node. must be local scope.
       let textNode = document.createTextNode(task); //grabs value from task key
       liNode.appendChild(textNode); //adds value from task to <li>
       document.getElementById('todoList').appendChild(liNode); //appends the <li> to the <ul>
+      // function findPriority() {
+      //   for (let i = 0; i < arrayOfTasks.length; i++) {
+      //     let rankStatus = arrayOfTasks[i][1];
+      //     if (rankStatus === 'high') {
+      //       arrayOfTasks.unshift(rankStatus);
+      //     } else if (rankStatus === 'low') {
+      //       arrayOfTasks.push(rankStatus);
+      //     } else {
+      //       console.log('not there yet');
+      //     }
+      //     console.log(arrayOfTasks[i][1]);
+      //   }
+      // }
+      // findPriority();
       form.reset(); //only resets radios and input, not submit
     },
     false
