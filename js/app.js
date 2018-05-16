@@ -36,8 +36,7 @@ function createTask() {
       let textNode = document.createTextNode(task); //grabs value from task key
       liNode.appendChild(textNode); //adds value from task to <li>
       document.getElementById('todoList').appendChild(liNode); //appends the <li> to the <ul>
-      // task = thingTodo.value = ''; //assign empty string to clear input form after submit clicked
-      form.reset();
+      form.reset(); //only resets radios and input, not submit
     },
     false
   );
