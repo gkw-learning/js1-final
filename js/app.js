@@ -30,15 +30,20 @@ function createTask() {
 
       let liNode = document.createElement('li'); //creating li node. must be local scope.
       let textNode = document.createTextNode(task); //grabs value from task key
-      let doneBtn = document.createElement('button');
-      doneBtn.textContent = 'done';
-      doneBtn.setAttribute('id', 'done');
+      let done = document.createElement('button');
+      done.textContent = 'done';
+      done.setAttribute('id', 'doneBtn');
+
+      let trash = document.createElement('button');
+      trash.textContent = 'trash';
+      trash.setAttribute('id', 'trashBtn');
 
       let todoList = document.getElementById('red');
       let green = document.getElementById('green');
       let orange = document.getElementById('orange');
 
-      liNode.appendChild(doneBtn);
+      liNode.appendChild(done);
+      liNode.appendChild(trash);
 
       if (newTask.rank === '1') {
         liNode.appendChild(textNode); //adds value from task to <li>
