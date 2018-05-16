@@ -8,21 +8,10 @@
     <title>BizzyBee</title>
   </head>
   <body>
-    <!-- Todo
+    <!-- Quick Add
     ************************************************************* -->
     <section>
-      <h1>Todo</h1>
-
-
-        <ul id='todoList'>
-        </ul>
-        <ul id="orange">
-        </ul>
-        <ul id='green'>
-        </ul>
-
-
-
+      <h1>Quick Add</h1>
       <form id=todoForm action="./index.html" value='todoForm'>
         <input type="text" id="thingTodo" class="addTodo" placeholder='Add a task'/>
         <!--event listener removes disabled when radio button select, making submit btn work -->
@@ -34,13 +23,21 @@
           <input type="radio" id="rank" value="3" name="priority">Low
         </div>
       </form>
+      <button>See your bees</button>
     <section>
-    <!-- Todonts because they're done
+    <!-- Task List View
     ************************************************************* -->
     <section>
-      <h1>done</h1>
+      <h1>your bees</h1>
+      <ul id='red'>
+      </ul>
+      <ul id="orange">
+      </ul>
+      <ul id='green'>
+      </ul>
+      <!-- <h1>done</h1>
         <ul></ul>
-      <div id="test"></div>
+      <div id="test"></div> -->
     <section>
 
     <script type="text/javascript" src="./js/app.js"></script>

@@ -1,7 +1,6 @@
 let form = document.getElementById('todoForm');
 let submitBtn = document.getElementById('submit');
-let radioBtn = document.getElementById('rank');
-
+let done = document.getElementById('done');
 let arrayOfTasks = [];
 
 function createTask() {
@@ -23,7 +22,6 @@ function createTask() {
     'submit' || 'keydown',
     e => {
       e.preventDefault();
-      // let task;
       let task = thingTodo.value; // stores the task typed by user
 
       //creating new function by using the constructor function, AddNewTask
@@ -32,9 +30,16 @@ function createTask() {
 
       let liNode = document.createElement('li'); //creating li node. must be local scope.
       let textNode = document.createTextNode(task); //grabs value from task key
-      let todoList = document.getElementById('todoList');
+      let doneBtn = document.createElement('button');
+      doneBtn.textContent = 'done';
+      doneBtn.setAttribute('id', 'done');
+
+      let todoList = document.getElementById('red');
       let green = document.getElementById('green');
       let orange = document.getElementById('orange');
+
+      liNode.appendChild(doneBtn);
+
       if (newTask.rank === '1') {
         liNode.appendChild(textNode); //adds value from task to <li>
         todoList.appendChild(liNode); //appends the <li> to the <ul>
@@ -45,21 +50,6 @@ function createTask() {
         liNode.appendChild(textNode); //adds value from task to <li>
         green.appendChild(liNode); //appends the <li> to the <ul>
       }
-
-      // // placee if statement here so liNode is defined
-      // let li;
-      // let text;
-      // let red;
-      // let green;
-      // if (newTask.rank === '3') {
-      //   li = document.createElement('li'); //creating li node. must be local scope.
-      //   text = document.createTextNode(task); //grabs value from task key
-      //   li.appendChild(text); //adds value from task to <li>
-      //   document.getElementById('red').appendChild(li); //appends the <li> to the <ul>
-      // } else if (newTask.rank === '1') {
-      //   li.appendChild(text); //adds value from task to <li>
-      //   document.getElementById('green').appendChild(li); //appends the <li> to the <ul>
-      // }
 
       //does not splice correctly
       if (newTask.rank === '1') {
