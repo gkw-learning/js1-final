@@ -36,22 +36,74 @@ function createTask() {
       liNode.appendChild(textNode); //adds value from task to <li>
       document.getElementById('todoList').appendChild(liNode); //appends the <li> to the <ul>
       // placee if statement here so liNode is defined
-      //adding ranked tasks to array accordingly and color coding
-      if (newTask.rank === '1') {
-        arrayOfTasks.push(newTask.rank);
-        liNode.style.color = 'red';
-      } else if (newTask.rank === '2') {
-        arrayOfTasks.push(newTask.rank);
-        liNode.style.color = 'orange';
-      } else {
-        arrayOfTasks.push(newTask.rank);
-        liNode.style.color = '#51cc7a';
-      }
-      console.log('let us see what the array looks like', arrayOfTasks);
-      let getSorted = arrayOfTasks.sort();
-      console.log(getSorted);
+      // let lowRank;
 
-      form.reset(); //only resets radios and input, not submit
+      // let j = 0;
+      // while (j < arrayOfTasks.length) {
+      //   j++;
+      //   if (arrayOfTasks[j].rank === '3') {
+      //     index = j;
+      //   }
+      // }
+      //adding ranked tasks to array accordingly and color coding
+
+      // let index;
+      // let j;
+      // for (j = 0; j < arrayOfTasks.length; j++) {
+      //   if (arrayOfTasks[j][1].rank === '2') {
+      //     console.log('wuutt', arrayOfTasks[j].rank === '2');
+      //   }
+      // }
+
+      // let j;
+      // console.log('this is newTask', newTask);
+      // console.log('this is arrayOfTasks', arrayOfTasks);
+      // let accessArray = newTask.rank;
+      // console.log('trying to get rank ', accessArray);
+
+      if (newTask.rank === '1') {
+        arrayOfTasks.unshift(newTask);
+        liNode.style.color = 'red';
+      } else if (newTask.rank === '3') {
+        liNode.style.color = 'green';
+        arrayOfTasks.push(newTask);
+      } else {
+        // let index = newTask.rank < 3 && newTask.rank > 1;
+        let index;
+        for (let j = 0; j < arrayOfTasks.length; j++) {
+          index = arrayOfTasks[j].rank === '3';
+        }
+        liNode.style.color = 'orange';
+        arrayOfTasks.splice(index, 0, newTask);
+      }
+
+      // let index;
+      // for (let j = 0; j < arrayOfTasks.length; j++) {
+      //   index = arrayOfTasks[j].rank;
+      //   if (newTask.rank === '2') {
+      //     arrayOfTasks.splice(index, 0, newTask);
+      //     liNode.style.color = 'orange';
+      //   } else if (newTask.rank === '3') {
+      //     arrayOfTasks.push(newTask);
+      //     liNode.style.color = '#51cc7a';
+      //   } else {
+      //     arrayOfTasks.unshift(newTask);
+      //     liNode.style.color = 'red';
+      //   }
+      // }
+      // console.log('check', index);
+      //
+      form.reset();
+
+      // console.log('let us see what the array looks like', arrayOfTasks);
+      // let getSorted = arrayOfTasks.sort();
+      // console.log(getSorted);
+      // let li = document.createElement('li');
+      // let text = document.createTextNode(task);
+      // li.appendChild(text);
+      // document.getElementById('test').appendChild(li);
+
+      //only resets radios and input, not submit
     },
     false
   );
