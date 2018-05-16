@@ -31,4 +31,8 @@ input.button {
 input.button:focus {
   outline: none; }
 
+.ex {
+  background-color: tomato;
+  color: white; }
+
 /*# sourceMappingURL=style.css.map */

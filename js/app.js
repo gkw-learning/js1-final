@@ -1,6 +1,7 @@
 let form = document.getElementById('todoForm');
 let submitBtn = document.getElementById('submit');
 let radioBtn = document.getElementById('rank');
+
 let arrayOfTasks = [];
 
 function createTask() {
@@ -23,38 +24,26 @@ function createTask() {
     e => {
       e.preventDefault();
       // let task;
+      let fake = document.getElementsByTagName('li');
       let task = thingTodo.value; // stores the task typed by user
 
       //creating new function by using the constructor function, AddNewTask
       let newTask = new AddNewTask(task, rank);
-      //if value="high" unshift() answer to beginning of array;
-      // arrayOfTasks.push(newTask);
-      console.log('check it part2', newTask.rank);
-      if (newTask.rank === 'high') {
-        arrayOfTasks.unshift(newTask);
-      } else {
-        arrayOfTasks.push(newTask);
-      }
       console.log('this should be ranked', arrayOfTasks);
 
       let liNode = document.createElement('li'); //creating li node. must be local scope.
       let textNode = document.createTextNode(task); //grabs value from task key
       liNode.appendChild(textNode); //adds value from task to <li>
       document.getElementById('todoList').appendChild(liNode); //appends the <li> to the <ul>
-      // function findPriority() {
-      //   for (let i = 0; i < arrayOfTasks.length; i++) {
-      //     let rankStatus = arrayOfTasks[i][1];
-      //     if (rankStatus === 'high') {
-      //       arrayOfTasks.unshift(rankStatus);
-      //     } else if (rankStatus === 'low') {
-      //       arrayOfTasks.push(rankStatus);
-      //     } else {
-      //       console.log('not there yet');
-      //     }
-      //     console.log(arrayOfTasks[i][1]);
-      //   }
-      // }
-      // findPriority();
+      // placee if statement here so liNode is defined
+      //adding ranked tasks to array accordingly and color coding
+      if (newTask.rank === 'high') {
+        arrayOfTasks.unshift(newTask);
+        liNode.style.color = 'red';
+      } else {
+        arrayOfTasks.push(newTask);
+        liNode.style.color = '#51cc7a';
+      }
       form.reset(); //only resets radios and input, not submit
     },
     false
