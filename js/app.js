@@ -1,7 +1,6 @@
 let form = document.getElementById('todoForm');
 let submitBtn = document.getElementById('submit');
-let radioBtn = document.getElementById('rank');
-
+let done = document.getElementById('done');
 let arrayOfTasks = [];
 
 function createTask() {
@@ -23,8 +22,6 @@ function createTask() {
     'submit' || 'keydown',
     e => {
       e.preventDefault();
-      // let task;
-      let fake = document.getElementsByTagName('li');
       let task = thingTodo.value; // stores the task typed by user
 
       //creating new function by using the constructor function, AddNewTask
@@ -33,18 +30,67 @@ function createTask() {
 
       let liNode = document.createElement('li'); //creating li node. must be local scope.
       let textNode = document.createTextNode(task); //grabs value from task key
-      liNode.appendChild(textNode); //adds value from task to <li>
-      document.getElementById('todoList').appendChild(liNode); //appends the <li> to the <ul>
-      // placee if statement here so liNode is defined
-      //adding ranked tasks to array accordingly and color coding
-      if (newTask.rank === 'high') {
-        arrayOfTasks.unshift(newTask);
-        liNode.style.color = 'red';
+      let done = document.createElement('button');
+      done.textContent = 'done';
+      done.setAttribute('id', 'doneBtn');
+
+      let trash = document.createElement('button');
+      trash.textContent = 'trash';
+      trash.setAttribute('id', 'trashBtn');
+
+      let todoList = document.getElementById('red');
+      let green = document.getElementById('green');
+      let orange = document.getElementById('orange');
+
+      liNode.appendChild(done);
+      liNode.appendChild(trash);
+
+      if (newTask.rank === '1') {
+        liNode.appendChild(textNode); //adds value from task to <li>
+        todoList.appendChild(liNode); //appends the <li> to the <ul>
+      } else if (newTask.rank === '2') {
+        liNode.appendChild(textNode); //adds value from task to <li>
+        orange.appendChild(liNode); //appends the <li> to the <ul>
       } else {
-        arrayOfTasks.push(newTask);
-        liNode.style.color = '#51cc7a';
+        liNode.appendChild(textNode); //adds value from task to <li>
+        green.appendChild(liNode); //appends the <li> to the <ul>
       }
-      form.reset(); //only resets radios and input, not submit
+      done.addEventListener(
+        'click',
+        e => {
+          e.preventDefault();
+          console.log('you just clicked on done');
+          liNode.style.color = '#a3a19a';
+        },
+        false
+      );
+      trash.addEventListener(
+        'click',
+        e => {
+          e.preventDefault();
+          console.log('you just clicked on done');
+          liNode.remove();
+        },
+        false
+      );
+      //does not splice correctly
+      if (newTask.rank === '1') {
+        arrayOfTasks.unshift(newTask);
+        // liNode.style.color = 'red';
+      } else if (newTask.rank === '3') {
+        // liNode.style.color = 'green';
+        arrayOfTasks.push(newTask);
+      } else {
+        let index;
+        for (let j = 0; j < arrayOfTasks.length; j++) {
+          index = arrayOfTasks[j].rank === '3';
+        }
+        // liNode.style.color = 'orange';
+        // liNode.style.backgroundColor = 'yellow';
+        arrayOfTasks.splice(index, 0, newTask);
+      }
+
+      form.reset();
     },
     false
   );

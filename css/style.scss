@@ -5,13 +5,20 @@ $yellow: #ffb311;
 $green: #51cc7a;
 $blue: #2196f3;
 $grey: #a3a19a;
-$fake-black: #191919;
+$fake-black: #1d1d1d;
+/* ----------------------------------------------------------- */
+/*  Fonts                                                      */
+/*------------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css?family=Cantarell:700i');
+$logo-font: 'Cantarell', sans-serif; //use all caps, bold SHOP APPS WATCH
 /* ----------------------------------------------------------- */
 /*  Pixel to rem                                               */
 /*------------------------------------------------------------ */
 $font14px: .875rem;
 $font12px: .75rem;
 $font10px: .625rem;
+$logo-size: 2.8rem;
+$h1: 1.688rem;
 /* let the code begin
 ------------------------------------------------------------- */
 body {
@@ -19,12 +26,61 @@ body {
   color: $yellow;
   font-family: Arial, Helvetica, sans-serif;
 }
+/* ----------------------------------------------------------- */
+/*  landing                                                    */
+/*------------------------------------------------------------ */
+.landing {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  // background-color: #009688;
+}
+.logo-container {
+  background-color: tomato;
+  width: 100vw;
+  height: 61px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 45px;
+
+  .logo {
+    font-family: $logo-font;
+    font-size: $logo-size;
+  }
+  .bee {
+    width: 60px;
+    height: 60px;
+    -webkit-transform: rotate(46deg);
+    -moz-transform: rotate(46deg);
+    -ms-transform: rotate(46deg);
+    -o-transform: rotate(46deg);
+    transform: rotate(46deg);
+  }
+}
+.label {
+  font-size: $h1;
+}
+.input-container {
+  display: flex;
+  // background-color: rebeccapurple;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+}
 
 input.addTodo {
-  width: 200px;
+  width: 250px;
+  height: 30px;
+  font-size: 1.125rem;
   padding: 8px;
   border: none;
   color: $grey;
+  // margin: 7px 0 32px 0px;
 }
 
 input.addTodo:focus {
@@ -32,7 +88,9 @@ input.addTodo:focus {
 }
 
 input.button {
-  width: 47px;
+  width: 80px;
+  height: 46px;
+  font-size: 1rem;
   border: none;
   border-radius: 0;
   padding: 8px;
@@ -44,7 +102,110 @@ input.button:focus {
   outline: none;
 }
 
-.ex {
-  background-color: tomato;
+.radio-container {
+  font-size: 1.25rem;
+  // background-color: lightblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+}
+
+.wide-button {
+  width: 200px;
+  height: 46px;
+  background: $blue;
   color: white;
+  border: none;
+  font-size: 1.125rem;
+}
+.quick-add-container {
+  position: relative;
+  top: 20px;
+}
+/* ----------------------------------------------------------- */
+/*  Todo List                                                  */
+/*------------------------------------------------------------ */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.task-label {
+  font-size: $h1;
+  bottom: 20px;
+  left: 5px;
+}
+
+// .ul-wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   background: red;
+// }
+
+.red {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: tomato;
+  border-radius: 20px;
+  border: 6px $fake-black solid;
+  margin: 5px 0 5px 0;
+  li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+  }
+}
+.orange {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: $yellow;
+  border-radius: 20px;
+  border: 6px $fake-black solid;
+  margin: 5px 0 5px 0;
+  li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+  }
+}
+.green {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: $blue;
+  border-radius: 20px;
+  border: 6px $fake-black solid;
+  margin: 5px 0 5px 0;
+  li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+  }
 }

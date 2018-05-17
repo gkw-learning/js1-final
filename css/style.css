@@ -2,26 +2,74 @@
 /*  Color Palette                                              */
 /*------------------------------------------------------------ */
 /* ----------------------------------------------------------- */
+/*  Fonts                                                      */
+/*------------------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css?family=Cantarell:700i");
+/* ----------------------------------------------------------- */
 /*  Pixel to rem                                               */
 /*------------------------------------------------------------ */
 /* let the code begin
 ------------------------------------------------------------- */
 body {
-  background-color: #191919;
+  background-color: #1d1d1d;
   color: #ffb311;
   font-family: Arial, Helvetica, sans-serif; }
 
+/* ----------------------------------------------------------- */
+/*  landing                                                    */
+/*------------------------------------------------------------ */
+.landing {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.logo-container {
+  background-color: tomato;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 45px; }
+  .logo-container .logo {
+    font-family: "Cantarell", sans-serif;
+    font-size: 2.8rem; }
+  .logo-container .bee {
+    width: 60px;
+    height: 60px;
+    -webkit-transform: rotate(46deg);
+    -moz-transform: rotate(46deg);
+    -ms-transform: rotate(46deg);
+    -o-transform: rotate(46deg);
+    transform: rotate(46deg); }
+
+.label {
+  font-size: 1.688rem; }
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px; }
+
 input.addTodo {
-  width: 200px;
+  width: 250px;
+  height: 30px;
+  font-size: 1.125rem;
   padding: 8px;
   border: none;
   color: #a3a19a; }
 
 input.addTodo:focus {
-  color: #191919; }
+  color: #1d1d1d; }
 
 input.button {
-  width: 47px;
+  width: 80px;
+  height: 46px;
+  font-size: 1rem;
   border: none;
   border-radius: 0;
   padding: 8px;
@@ -31,8 +79,96 @@ input.button {
 input.button:focus {
   outline: none; }
 
-.ex {
-  background-color: tomato;
-  color: white; }
+.radio-container {
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px; }
+
+.wide-button {
+  width: 200px;
+  height: 46px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  font-size: 1.125rem; }
+
+.quick-add-container {
+  position: relative;
+  top: 20px; }
+
+/* ----------------------------------------------------------- */
+/*  Todo List                                                  */
+/*------------------------------------------------------------ */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh; }
+
+.task-label {
+  font-size: 1.688rem;
+  bottom: 20px;
+  left: 5px; }
+
+.red {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: tomato;
+  border-radius: 20px;
+  border: 6px #1d1d1d solid;
+  margin: 5px 0 5px 0; }
+  .red li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0; }
+
+.orange {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: #ffb311;
+  border-radius: 20px;
+  border: 6px #1d1d1d solid;
+  margin: 5px 0 5px 0; }
+  .orange li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0; }
+
+.green {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: #2196f3;
+  border-radius: 20px;
+  border: 6px #1d1d1d solid;
+  margin: 5px 0 5px 0; }
+  .green li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0; }
 
 /*# sourceMappingURL=style.css.map */
