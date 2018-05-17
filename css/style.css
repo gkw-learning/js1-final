@@ -15,8 +15,11 @@ body {
   color: #ffb311;
   font-family: Arial, Helvetica, sans-serif; }
 
+/* ----------------------------------------------------------- */
+/*  landing                                                    */
+/*------------------------------------------------------------ */
 .landing {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -87,11 +90,85 @@ input.button:focus {
   width: 200px;
   height: 46px;
   background: #2196f3;
+  color: white;
   border: none;
   font-size: 1.125rem; }
 
 .quick-add-container {
   position: relative;
   top: 20px; }
+
+/* ----------------------------------------------------------- */
+/*  Todo List                                                  */
+/*------------------------------------------------------------ */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh; }
+
+.task-label {
+  font-size: 1.688rem;
+  bottom: 20px;
+  left: 5px; }
+
+.red {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: tomato;
+  border-radius: 20px;
+  border: 6px #1d1d1d solid;
+  margin: 5px 0 5px 0; }
+  .red li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0; }
+
+.orange {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: #ffb311;
+  border-radius: 20px;
+  border: 6px #1d1d1d solid;
+  margin: 5px 0 5px 0; }
+  .orange li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0; }
+
+.green {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: #2196f3;
+  border-radius: 20px;
+  border: 6px #1d1d1d solid;
+  margin: 5px 0 5px 0; }
+  .green li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0; }
 
 /*# sourceMappingURL=style.css.map */

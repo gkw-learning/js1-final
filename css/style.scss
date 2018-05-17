@@ -26,9 +26,11 @@ body {
   color: $yellow;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+/* ----------------------------------------------------------- */
+/*  landing                                                    */
+/*------------------------------------------------------------ */
 .landing {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -69,23 +71,6 @@ body {
   align-items: center;
   height: 65px;
 }
-// header {
-//   width: 100%;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-// }
-// .landing {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   background-color: teal;
-//
-//   .logo {
-//     font-family: $logo-font;
-//     color: $yellow;
-//     font-size: $font14px;
-//   }
 
 input.addTodo {
   width: 250px;
@@ -129,6 +114,7 @@ input.button:focus {
   width: 200px;
   height: 46px;
   background: $blue;
+  color: white;
   border: none;
   font-size: 1.125rem;
 }
@@ -136,4 +122,89 @@ input.button:focus {
   position: relative;
   top: 20px;
 }
+/* ----------------------------------------------------------- */
+/*  Todo List                                                  */
+/*------------------------------------------------------------ */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.task-label {
+  font-size: $h1;
+  bottom: 20px;
+  left: 5px;
+}
+
+// .ul-wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   background: red;
 // }
+
+.red {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: tomato;
+  border-radius: 20px;
+  border: 6px $fake-black solid;
+  margin: 5px 0 5px 0;
+  li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+  }
+}
+.orange {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: $yellow;
+  border-radius: 20px;
+  border: 6px $fake-black solid;
+  margin: 5px 0 5px 0;
+  li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+  }
+}
+.green {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  font-size: 28px;
+  padding: 15px 23px;
+  background: $blue;
+  border-radius: 20px;
+  border: 6px $fake-black solid;
+  margin: 5px 0 5px 0;
+  li {
+    height: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+  }
+}

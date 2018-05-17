@@ -76,16 +76,17 @@ function createTask() {
       //does not splice correctly
       if (newTask.rank === '1') {
         arrayOfTasks.unshift(newTask);
-        liNode.style.color = 'red';
+        // liNode.style.color = 'red';
       } else if (newTask.rank === '3') {
-        liNode.style.color = 'green';
+        // liNode.style.color = 'green';
         arrayOfTasks.push(newTask);
       } else {
         let index;
         for (let j = 0; j < arrayOfTasks.length; j++) {
           index = arrayOfTasks[j].rank === '3';
         }
-        liNode.style.color = 'orange';
+        // liNode.style.color = 'orange';
+        // liNode.style.backgroundColor = 'yellow';
         arrayOfTasks.splice(index, 0, newTask);
       }
 
