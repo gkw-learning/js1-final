@@ -6,7 +6,7 @@ let arrayOfTasks = [];
 function createTask() {
   let radioOnInput = document.querySelectorAll('input#rank'); //grabs all inputs with id #rank
   let rank; //exposes value of rank within the for loop to the constructor function
-  //loops through length of radioOnInput, whichever is selected canges submit color
+  //loops through length of radioOnInput, whichever is selected changes submit color
   for (let i = 0; i < radioOnInput.length; i++) {
     //listens for change on any radio
     let x = radioOnInput[i].addEventListener('change', e => {

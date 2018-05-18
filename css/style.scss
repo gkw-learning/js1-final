@@ -41,12 +41,13 @@ body {
 .logo-container {
   background-color: tomato;
   width: 100vw;
-  height: 61px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   top: 45px;
+  padding-bottom: 10px;
 
   .logo {
     font-family: $logo-font;
