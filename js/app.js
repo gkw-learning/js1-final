@@ -52,9 +52,16 @@ function createTask() {
         liNode.appendChild(textNode); //adds value from task to <li>
         orange.appendChild(liNode); //appends the <li> to the <ul>
       } else {
+        //3
         liNode.appendChild(textNode); //adds value from task to <li>
         green.appendChild(liNode); //appends the <li> to the <ul>
       }
+
+      //resets submit button to require radio button selection before adding task
+      submitBtn.setAttribute('disabled', false);
+      submitBtn.style.backgroundColor = '#a3a19a';
+
+      //click on done button
       done.addEventListener(
         'click',
         e => {
@@ -64,31 +71,17 @@ function createTask() {
         },
         false
       );
+
+      //click on trash button
       trash.addEventListener(
         'click',
         e => {
           e.preventDefault();
-          console.log('you just clicked on done');
+          console.log('you just clicked on trash');
           liNode.remove();
         },
         false
       );
-      //does not splice correctly
-      if (newTask.rank === '1') {
-        arrayOfTasks.unshift(newTask);
-        // liNode.style.color = 'red';
-      } else if (newTask.rank === '3') {
-        // liNode.style.color = 'green';
-        arrayOfTasks.push(newTask);
-      } else {
-        let index;
-        for (let j = 0; j < arrayOfTasks.length; j++) {
-          index = arrayOfTasks[j].rank === '3';
-        }
-        // liNode.style.color = 'orange';
-        // liNode.style.backgroundColor = 'yellow';
-        arrayOfTasks.splice(index, 0, newTask);
-      }
 
       form.reset();
     },
