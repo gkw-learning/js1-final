@@ -22,6 +22,11 @@ function createTask() {
     'submit' || 'keydown',
     e => {
       e.preventDefault();
+
+      //resets submit button to require radio button selection before adding task
+      submitBtn.setAttribute('disabled', true); //second argument doesn't matter if true or false
+      submitBtn.style.backgroundColor = '#a3a19a';
+
       let task = thingTodo.value; // stores the task typed by user
 
       //creating new function by using the constructor function, AddNewTask
@@ -57,11 +62,7 @@ function createTask() {
         green.appendChild(liNode); //appends the <li> to the <ul>
       }
 
-      //resets submit button to require radio button selection before adding task
-      submitBtn.setAttribute('disabled', false);
-      submitBtn.style.backgroundColor = '#a3a19a';
-
-      //click on done button
+      //done button
       done.addEventListener(
         'click',
         e => {
@@ -72,7 +73,7 @@ function createTask() {
         false
       );
 
-      //click on trash button
+      //trash button
       trash.addEventListener(
         'click',
         e => {
