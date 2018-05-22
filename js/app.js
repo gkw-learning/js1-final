@@ -92,7 +92,19 @@ function createTask() {
 
 createTask();
 
+//constructor function
 function AddNewTask(task, rank) {
   this.task = task;
   this.rank = rank;
 }
+
+//smooth scroll to any anchor tag
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
