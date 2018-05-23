@@ -26,6 +26,10 @@ body {
   color: $yellow;
   font-family: Arial, Helvetica, sans-serif;
 }
+html {
+  position: relative;
+  min-height: 100%;
+}
 /* ----------------------------------------------------------- */
 /*  landing                                                    */
 /*------------------------------------------------------------ */
@@ -140,6 +144,11 @@ button {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: cadetblue;
+  padding-top: 20px;
+  overflow-y: scroll;
+  // margin-bottom: 110px;
+  margin-bottom: 95px;
 }
 
 .task-label {
@@ -211,4 +220,31 @@ button {
     align-items: center;
     margin: 12px 0;
   }
+}
+/* ----------------------------------------------------------- */
+/*  Footer                                                     */
+/*------------------------------------------------------------ */
+.droper {
+  // width: 100%;
+  // position: relative;
+  // bottom: -3px;
+  background-color: pink;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  // height: 100px;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  color: white;
+  background: black;
+  height: 100px;
+  position: absolute;
+  // top: 50px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
