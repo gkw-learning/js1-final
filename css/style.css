@@ -11,9 +11,13 @@
 /* let the code begin
 ------------------------------------------------------------- */
 body {
-  background-color: #1d1d1d;
+  background-color: #2a2a2a;
   color: #ffb311;
   font-family: Arial, Helvetica, sans-serif; }
+
+html {
+  position: relative;
+  min-height: 100%; }
 
 /* ----------------------------------------------------------- */
 /*  landing                                                    */
@@ -29,11 +33,13 @@ body {
 .logo-container {
   background-color: tomato;
   width: 100vw;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 45px; }
+  top: 45px;
+  padding-bottom: 10px; }
   .logo-container .logo {
     font-family: "Cantarell", sans-serif;
     font-size: 2.8rem; }
@@ -86,13 +92,17 @@ input.button:focus {
   align-items: center;
   height: 75px; }
 
+button {
+  text-decoration: none; }
+
 .wide-button {
   width: 200px;
   height: 46px;
   background: #2196f3;
   color: white;
   border: none;
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  text-decoration: none; }
 
 .quick-add-container {
   position: relative;
@@ -107,12 +117,25 @@ input.button:focus {
   justify-content: space-evenly;
   align-items: center;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  padding-top: 20px;
+  overflow-y: scroll; }
 
 .task-label {
   font-size: 1.688rem;
   bottom: 20px;
-  left: 5px; }
+  left: 5px;
+  width: 100%;
+  padding-left: 30px;
+  position: relative;
+  bottom: 28px;
+  /* margin-bottom: 10px; */ }
+
+.ul-wrapper {
+  height: 444px;
+  overflow-y: scroll;
+  position: relative;
+  bottom: 65px; }
 
 .red {
   display: flex;
@@ -170,5 +193,20 @@ input.button:focus {
     justify-content: space-between;
     align-items: center;
     margin: 12px 0; }
+
+/* ----------------------------------------------------------- */
+/*  Footer                                                     */
+/*------------------------------------------------------------ */
+.droper {
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  width: 100%; }
+
+.footer {
+  width: 100vw;
+  height: 65px;
+  display: flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */

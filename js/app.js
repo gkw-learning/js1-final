@@ -6,7 +6,7 @@ let arrayOfTasks = [];
 function createTask() {
   let radioOnInput = document.querySelectorAll('input#rank'); //grabs all inputs with id #rank
   let rank; //exposes value of rank within the for loop to the constructor function
-  //loops through length of radioOnInput, whichever is selected canges submit color
+  //loops through length of radioOnInput, whichever is selected changes submit color
   for (let i = 0; i < radioOnInput.length; i++) {
     //listens for change on any radio
     let x = radioOnInput[i].addEventListener('change', e => {
@@ -22,6 +22,11 @@ function createTask() {
     'submit' || 'keydown',
     e => {
       e.preventDefault();
+
+      //resets submit button to require radio button selection before adding task
+      submitBtn.setAttribute('disabled', true); //second argument doesn't matter if true or false
+      submitBtn.style.backgroundColor = '#a3a19a';
+
       let task = thingTodo.value; // stores the task typed by user
 
       //creating new function by using the constructor function, AddNewTask
@@ -52,9 +57,12 @@ function createTask() {
         liNode.appendChild(textNode); //adds value from task to <li>
         orange.appendChild(liNode); //appends the <li> to the <ul>
       } else {
+        //3
         liNode.appendChild(textNode); //adds value from task to <li>
         green.appendChild(liNode); //appends the <li> to the <ul>
       }
+
+      //done button
       done.addEventListener(
         'click',
         e => {
@@ -64,31 +72,17 @@ function createTask() {
         },
         false
       );
+
+      //trash button
       trash.addEventListener(
         'click',
         e => {
           e.preventDefault();
-          console.log('you just clicked on done');
+          console.log('you just clicked on trash');
           liNode.remove();
         },
         false
       );
-      //does not splice correctly
-      if (newTask.rank === '1') {
-        arrayOfTasks.unshift(newTask);
-        // liNode.style.color = 'red';
-      } else if (newTask.rank === '3') {
-        // liNode.style.color = 'green';
-        arrayOfTasks.push(newTask);
-      } else {
-        let index;
-        for (let j = 0; j < arrayOfTasks.length; j++) {
-          index = arrayOfTasks[j].rank === '3';
-        }
-        // liNode.style.color = 'orange';
-        // liNode.style.backgroundColor = 'yellow';
-        arrayOfTasks.splice(index, 0, newTask);
-      }
 
       form.reset();
     },
@@ -98,7 +92,19 @@ function createTask() {
 
 createTask();
 
+//constructor function
 function AddNewTask(task, rank) {
   this.task = task;
   this.rank = rank;
 }
+
+//smooth scroll to any anchor tag
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});

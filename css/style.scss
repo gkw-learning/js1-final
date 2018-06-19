@@ -22,13 +22,18 @@ $h1: 1.688rem;
 /* let the code begin
 ------------------------------------------------------------- */
 body {
-  background-color: $fake-black;
+  background-color: #2a2a2a;
   color: $yellow;
   font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  position: relative;
+  min-height: 100%;
 }
 /* ----------------------------------------------------------- */
 /*  landing                                                    */
 /*------------------------------------------------------------ */
+
 .landing {
   width: 100vw;
   height: 100vh;
@@ -41,12 +46,13 @@ body {
 .logo-container {
   background-color: tomato;
   width: 100vw;
-  height: 61px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   top: 45px;
+  padding-bottom: 10px;
 
   .logo {
     font-family: $logo-font;
@@ -111,6 +117,10 @@ input.button:focus {
   height: 75px;
 }
 
+button {
+  text-decoration: none;
+}
+
 .wide-button {
   width: 200px;
   height: 46px;
@@ -118,6 +128,7 @@ input.button:focus {
   color: white;
   border: none;
   font-size: 1.125rem;
+  text-decoration: none;
 }
 .quick-add-container {
   position: relative;
@@ -134,20 +145,54 @@ input.button:focus {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  // background-color: cadetblue;
+  padding-top: 20px;
+  overflow-y: scroll;
 }
 
 .task-label {
-  font-size: $h1;
+  // font-size: $h1;
+  // bottom: 20px;
+  // left: 5px;
+  // // background: darkblue;
+  // width: 100%;
+  // padding-left: 30px;
+  // position: relative;
+  // bottom: 23px;
+  font-size: 1.688rem;
   bottom: 20px;
   left: 5px;
+  width: 100%;
+  padding-left: 30px;
+  position: relative;
+  bottom: 28px;
+  /* margin-bottom: 10px; */
 }
 
-// .ul-wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-//   background: red;
-// }
+.ul-wrapper {
+  // max-height: 80vh;
+  // background: rebeccapurple;
+  // overflow-y: scroll;
+  // height: 80vh;
+  // background: rebeccapurple;
+  // overflow-y: scroll;
+  // position: relative;
+  // // bottom: 45px;
+  // bottom: 25px;
+  // height: 452px;
+  // overflow-y: scroll;
+  // position: relative;
+  // bottom: 68px;
+  // height: 505px;
+  // background: rebeccapurple;
+  // overflow-y: scroll;
+  // position: relative;
+  // bottom: 60px;
+  height: 444px;
+  overflow-y: scroll;
+  position: relative;
+  bottom: 65px;
+}
 
 .red {
   display: flex;
@@ -208,4 +253,44 @@ input.button:focus {
     align-items: center;
     margin: 12px 0;
   }
+}
+/* ----------------------------------------------------------- */
+/*  Footer                                                     */
+/*------------------------------------------------------------ */
+.droper {
+  // width: 100%;
+  // position: relative;
+  // bottom: -3px;
+  // background-color: pink;
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  // height: 100px;
+  width: 100%;
+}
+//
+// .footer {
+//   width: 100%;
+//   color: white;
+//   background: black;
+//   height: 100px;
+//   position: absolute;
+//   // top: 50px;
+//   bottom: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.footer {
+  // width: 100vw;
+  // // background: black;
+  // height: 75px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: 100vw;
+  height: 65px;
+  display: flex;
+  justify-content: center;
 }

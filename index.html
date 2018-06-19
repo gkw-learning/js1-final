@@ -8,7 +8,7 @@
     <title>BizzyBeez</title>
   </head>
   <body>
-    <section class="landing">
+    <section id=quickAdd class="landing">
     <header>
       <div class="logo-container">
         <h1 class="logo">BizzyBeez</h1>
@@ -34,13 +34,14 @@
       </form>
 
     </section>
-    <button class="wide-button">See your beez</button>
+    <a href="#beez"><button class="wide-button">View Beez</button></a>
+
   </section>
     <!-- Task List View
     ************************************************************* -->
-    <section class='task-list'>
+    <section id='beez' class='task-list'>
+      <h1 class='task-label'>Your Beez</h1>
       <div class=ul-wrapper>
-        <h1 class='task-label'>Your Beez</h1>
         <ul class="red" id='red'>
         </ul>
         <ul class="orange" id="orange">
@@ -48,7 +49,18 @@
         <ul class="green" id='green'>
         </ul>
       </div>
-    <section>
+      <footer class="droper">
+        <div class="footer">
+          <a href="#quickAdd"><button class="wide-button">Home</button></a>
+        </div>
+      </footer>
+      <!-- <a href="#quickAdd"><button class="wide-button">Home</button></a> -->
+
+    </section>
+    <!-- Footer
+    ************************************************************* -->
+
+
 
     <script type="text/javascript" src="./js/app.js"></script>
   </body>
