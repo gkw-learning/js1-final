@@ -119,7 +119,8 @@ button {
   width: 100vw;
   height: 100vh;
   padding-top: 20px;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 .task-label {
   font-size: 1.688rem;
@@ -198,11 +199,13 @@ button {
 
 #doneBtn {
   color: #1d1d1d;
-  font-size: 22px; }
+  font-size: 22px;
+  cursor: pointer; }
 
 #trashBtn {
   color: #1d1d1d;
-  font-size: 22px; }
+  font-size: 22px;
+  cursor: pointer; }
 
 /* ----------------------------------------------------------- */
 /*  Footer                                                     */

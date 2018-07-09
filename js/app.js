@@ -35,11 +35,11 @@ function createTask() {
 
       let liNode = document.createElement('li'); //creating li node. must be local scope.
       let textNode = document.createTextNode(task); //grabs value from task key
-      let done = document.createElement('button');
+      let done = document.createElement('div');
       done.innerHTML = '<i class="far fa-check-square"></i>';
       done.setAttribute('id', 'doneBtn');
 
-      let trash = document.createElement('button');
+      let trash = document.createElement('div');
       trash.innerHTML = '<i class="fas fa-trash-alt"></i>';
       trash.setAttribute('id', 'trashBtn');
 
