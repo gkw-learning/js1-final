@@ -128,8 +128,7 @@ button {
   width: 100%;
   padding-left: 30px;
   position: relative;
-  bottom: 28px;
-  /* margin-bottom: 10px; */ }
+  bottom: 28px; }
 
 .ul-wrapper {
   height: 444px;
@@ -141,7 +140,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 270px;
-  font-size: 28px;
+  font-size: 18px;
   padding: 15px 23px;
   background: tomato;
   border-radius: 20px;
@@ -154,13 +153,14 @@ button {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin: 12px 0; }
+    margin: 18px 0;
+    line-height: 22px; }
 
 .orange {
   display: flex;
   flex-direction: column;
   width: 270px;
-  font-size: 28px;
+  font-size: 18px;
   padding: 15px 23px;
   background: #ffb311;
   border-radius: 20px;
@@ -173,13 +173,14 @@ button {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin: 12px 0; }
+    margin: 18px 0;
+    line-height: 22px; }
 
 .green {
   display: flex;
   flex-direction: column;
   width: 270px;
-  font-size: 28px;
+  font-size: 18px;
   padding: 15px 23px;
   background: #2196f3;
   border-radius: 20px;
@@ -192,7 +193,16 @@ button {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin: 12px 0; }
+    margin: 18px 0;
+    line-height: 22px; }
+
+#doneBtn {
+  color: #1d1d1d;
+  font-size: 22px; }
+
+#trashBtn {
+  color: #1d1d1d;
+  font-size: 22px; }
 
 /* ----------------------------------------------------------- */
 /*  Footer                                                     */
